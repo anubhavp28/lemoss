@@ -7,10 +7,10 @@ CPP = 1
 PYTHON = 2
 
 EXT = [
-    ['.c', '.h'],
-    ['.cpp', '.cc', '.cxx', '.c++', '.h', '.hh', '.hxx', '.hpp', '.h++'],
-    ['.py'],
-]
+        ['.c', '.h'],
+        ['.cpp', '.cc', '.cxx', '.c++', '.h', '.hh', '.hxx', '.hpp', '.h++'],
+        ['.py'],
+    ]
 
 def run_moss(paths, language=C, base_file=None, by_dir=False, extensions=None):
     args = ['./moss']
@@ -37,8 +37,6 @@ def run_moss_in_dir(directory, language=C, base_file=None, extensions=None):
     if not os.path.isdir(directory):
         raise Exception('directory name passed to run_mos_in_dir() is invalid')
     directory = os.path.join(directory, '*', '')
-    return run_moss(
-            directory, language, base_file, 
-            by_dir=True, extensions)
+    return run_moss(directory, language, base_file, True, extensions)
 
-print(run_moss(['matmul.c', 'strassen.c']))
+print(run_moss(['dfs.py', 'floyd.py'], language=PYTHON))
