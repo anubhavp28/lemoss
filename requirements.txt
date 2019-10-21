@@ -67,7 +67,7 @@ Sphinx==1.7.2
 sphinxcontrib-websupport==1.0.1
 subprocess32==3.2.7
 trollius==2.0.1
-Twisted==18.7.0
+Twisted==19.7.0
 typing==3.6.6
 urllib3==1.22
 virtualenv==16.1.0
